@@ -271,7 +271,7 @@
     padding-top:26px;
     border-top:1px solid var(--line);
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
     gap:24px;
   }
   .involvement h3{
@@ -289,6 +289,11 @@
     color:#33383E;
   }
   .involvement p{margin:0; font-size:14px; color:#33383E;}
+
+  /* ---------- Conferences ---------- */
+  .conference-list{margin:0; padding-left:18px;}
+  .conference-list li{margin-bottom:6px; font-size:14.5px; color:#33383E;}
+  .conference-list li:last-child{margin-bottom:0;}
  
   /* ---------- Skills ---------- */
   .skill-groups{display:flex; flex-direction:column; gap:24px;}
@@ -510,6 +515,7 @@
       <a href="#education" data-target="education">Education</a>
       <a href="#skills" data-target="skills">Skills</a>
       <a href="#languages" data-target="languages">Languages</a>
+      <a href="#conferences" data-target="conferences">Conferences</a>
       <a href="#references" data-target="references">References</a>
     </div>
   </nav>
@@ -614,10 +620,6 @@
             <li>Leadership</li>
           </ul>
         </div>
-        <div>
-          <h3>Involvement</h3>
-          <p>2025 S-STEM Scholars meeting</p>
-        </div>
       </div>
     </section>
  
@@ -680,6 +682,13 @@
           <span class="lang-level">Intermediate</span>
         </div>
       </div>
+    </section>
+ 
+    <section id="conferences">
+      <h2>Conferences</h2>
+      <ul class="conference-list">
+        <li>2025 S-STEM Scholars Meeting</li>
+      </ul>
     </section>
  
     <section id="references">
