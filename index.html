@@ -24,6 +24,7 @@
   html, body{
     max-width:100%;
     overflow-x:hidden;
+    overscroll-behavior-x:none;
   }
  
   body{
@@ -660,6 +661,13 @@
 </div>
  
 <script>
+  // Force a clean, unscrolled start — prevents the browser from restoring
+  // a stale horizontal (or vertical) scroll position on reload.
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+
   // Scroll-spy: move the rail dot + highlight active section
   const links = Array.from(document.querySelectorAll('.rail-links a'));
   const sections = links.map(a => document.getElementById(a.dataset.target));
@@ -684,7 +692,10 @@
  
   window.addEventListener('scroll', updateActive, { passive: true });
   window.addEventListener('resize', updateActive);
-  window.addEventListener('load', updateActive);
+  window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+    updateActive();
+  });
  
   // Copy-to-clipboard on email / phone chips
   document.querySelectorAll('.contact-chip[data-copy]').forEach(chip => {
