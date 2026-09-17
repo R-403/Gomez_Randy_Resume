@@ -447,6 +447,42 @@
     .job-head, .edu-head{flex-direction:column; align-items:flex-start; gap:2px;}
   }
  
+  /* ---------- FINAL MOBILE OVERRIDE (highest priority, forces centering) ---------- */
+  @media (max-width: 640px){
+    html, body{
+      width:100% !important;
+      max-width:100% !important;
+      margin:0 !important;
+    }
+    .layout{
+      display:block !important;
+      width:100% !important;
+      max-width:100% !important;
+      box-sizing:border-box !important;
+      margin:0 auto !important;
+      padding:24px 20px !important;
+    }
+    main{
+      width:100% !important;
+      max-width:100% !important;
+      margin:0 !important;
+    }
+    nav.rail{
+      width:100% !important;
+      max-width:100% !important;
+      margin:0 0 24px 0 !important;
+      padding:12px 0 !important;
+      box-sizing:border-box !important;
+    }
+    header.hero, .lede, .contact-row, section{
+      width:100% !important;
+      max-width:100% !important;
+      margin-left:0 !important;
+      margin-right:0 !important;
+      box-sizing:border-box !important;
+    }
+  }
+
   @media print{
     nav.rail, footer .print-btn{display:none;}
     body{background:#fff;}
